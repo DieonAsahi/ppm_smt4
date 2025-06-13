@@ -488,6 +488,20 @@ header nav.main-nav {
     display: none; /* Sembunyikan navigasi utama pada perangkat kecil */
 }
 
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
 
 
 @media (min-width: 768px) {
