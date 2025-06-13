@@ -483,26 +483,82 @@ footer .social-links a:hover {
     background-color: #555;
 }
 
-/* Adjust the main-nav for better responsiveness */
-header nav.main-nav {
-    display: none; /* Sembunyikan navigasi utama pada perangkat kecil */
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text .btn {
+    width: 100%;
+  }
+
+  .products h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
 }
 
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
 
-            .sidebar-toggle {
-                display: block;
-            }
+  .hero-text p {
+    font-size: 0.95rem;
+  }
 
-            nav ul {
-                display: none;
-            }
-        }
+  .product-card p {
+    font-size: 0.9rem;
+  }
+}
 
+/* RESPONSIVE TEXT & LAYOUT */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+  }
+
+  .product-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .product-card .price {
+    font-size: 1rem;
+  }
+
+  .product-card .desc,
+  .product-card .toppings {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card .price {
+    font-size: 0.9rem;
+  }
+
+  .product-card .desc,
+  .product-card .toppings {
+    font-size: 0.85rem;
+  }
+}
 
 @media (min-width: 768px) {
     header nav.main-nav {
