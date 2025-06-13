@@ -566,6 +566,27 @@ footer .social-links a:hover {
     }
     
 }
+.desc {
+  font-size: 1rem;         /* Ukuran default (desktop) */
+  line-height: 1.5;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Untuk tablet */
+@media (max-width: 768px) {
+  .desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Untuk mobile */
+@media (max-width: 480px) {
+  .desc {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Responsif untuk slider pada perangkat kecil */
 @media (max-width: 767px) {
