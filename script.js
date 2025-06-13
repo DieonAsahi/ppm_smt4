@@ -10,6 +10,7 @@ sidebarToggle.addEventListener('click', () => {
     document.body.style.overflow = 'hidden';
 });
 
+
 closeBtn.addEventListener('click', closeSidebar);
 overlay.addEventListener('click', closeSidebar);
 

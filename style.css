@@ -4,6 +4,21 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /* Pastikan warnanya terlihat di navbar gelap */
+    margin-left: 20px; /* Geser ke kiri */
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
 
 body {
     display: flex;
@@ -20,7 +35,7 @@ header {
     color: #fff;
 }
 
-header .logo {
+header .logo:hover {
     font-size: 1.5em;
 }
 
@@ -92,16 +107,153 @@ main img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/* 
 .hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-}
+} */
 
-.about, .products, .contact {
+.pricelist, .products, .contact {
     padding: 40px 20px;
 }
+
+/* === SECTION PRICE LIST === */
+#pricelist {
+  background-color: #fffaf6;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #2b2b2b;
+}
+
+/* Header Utama */
+.pricelist-header {
+  text-align: center;
+  margin-top: 50px;     /* Jarak dari atas */
+  margin-bottom: 40px;  /* Jarak ke produk */
+}
+
+
+.pricelist-header h1 {
+  font-size: 2.5rem;
+  color: #2b2b2b;
+  margin-bottom: 10px;
+}
+
+.pricelist-header h2 {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Grid untuk semua jenis card */
+.pricelist-container,
+#pricelist .price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling Kartu Produk */
+.card,
+.price-card {
+  background-color: #fff;
+  border: 2px dashed #d2cfcf;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.adjusted-image {
+  margin-top: 0 !important;
+  margin-bottom: 10px;
+  transform: translateY(0); /* atau hilangkan kalau tidak perlu */
+  object-position: bottom;     /* 👈 Fokuskan isi gambar ke atas */
+}
+
+
+
+
+.card img,
+.price-card img {
+  width: 100%;
+  max-width: 250px;        /* batas maksimum ukuran */
+  aspect-ratio: 1 / 1;     /* jaga proporsi persegi */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 15px auto;  /* atas otomatis, bawah 15px */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+
+/* Judul dan Harga */
+.card .title,
+.price-card .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.card .price,
+.price-card .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Deskripsi */
+.card .desc,
+.price-card .desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.price-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #5c4033; /* Warna coklat kalem */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to right, #fffaf6, #fff3ea);
+  padding: 25px 30px;
+  border-radius: 12px;
+  border: 1.5px dashed #d1bca3;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.price-note:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.pricelist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
 
 .product-slider {
     position: relative;
@@ -127,7 +279,23 @@ main img {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+
+    display: flex;                /* Agar kontennya bisa ditata */
+    flex-direction: column;      /* Konten ditumpuk ke bawah */
+    align-items: center;         /* Tengah horizontal */
+    justify-content: center;     /* Tengah vertikal */
 }
+
+.product-item img {
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .prev-btn, .next-btn {
     position: absolute;
@@ -171,6 +339,7 @@ main img {
     color: #666;
     margin: 5px 0;
 }
+
 
 #contact a {
     color: #333;
@@ -318,6 +487,8 @@ footer .social-links a:hover {
 header nav.main-nav {
     display: none; /* Sembunyikan navigasi utama pada perangkat kecil */
 }
+
+
 
 @media (min-width: 768px) {
     header nav.main-nav {
