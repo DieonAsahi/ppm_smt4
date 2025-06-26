@@ -11,30 +11,27 @@
 </head>
 
 <body>
-
-    <!-- Header -->
     <header>
         <div class="logo">
             <img src="foto/logo_2_brownies.jpg" alt="">
             Brono
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Produk</a></li>
-                <li><a href="#pricelist">Pricelist</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <!-- <li><a href="#contact">Kontak</a></li> -->
-            </ul>
-        </nav>
-        <!-- Toggle Button untuk Sidebar -->
+        <div class="top-navbar">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#pricelist">Pricelist</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="sidebar-toggle">
             <i class="fas fa-bars"></i>
         </div>
     </header>
 
-
-    <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="close-btn">&times;</a>
         <ul>
@@ -42,13 +39,10 @@
             <li><a href="#products">Produk</a></li>
             <li><a href="#pricelist">Pricelist</a></li>
             <li><a href="#layanan">Layanan</a></li>
-            <!-- <li><a href="#contact">kontak</a></li> -->
         </ul>
     </div>
     <div class="overlay"></div>
 
-
-    <!-- Main Content -->
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
@@ -60,16 +54,13 @@
                         yang tak terlupakan. Cocok untuk camilan harian, hampers, atau oleh-oleh spesial. Tersedia dalam
                         berbagai varian rasa seperti original, choco chips, almond, dan matcha.
                     </p>
-                    <a href="#products" class="hero-btn">Shop Now</a>
+                    <a href="#pricelist" class="hero-btn">Shop Now</a>
                 </div>
                 <div class="hero-image">
                     <img src="foto/logo brono.png" alt="Foto logo">
                 </div>
             </div>
         </section>
-
-
-        <!-- Products/Services Section -->
 
         <section id="products" class="products">
             <h2>Nikmati Brownies Fudgy yang Lezat</h2>
@@ -78,62 +69,53 @@
                 <div class="product-list">
                     <div class="product-item">
                         <img src="foto/brownies_1.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
-
                     </div>
+
                     <div class="product-item">
                         <img src="foto/brownies_2.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
+
                     <div class="product-item">
                         <img src="foto/brownies_3.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
+
                     <div class="product-item">
                         <img src="foto/brownies_4.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
+
                     <div class="product-item">
                         <img src="foto/brownies_5.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
+
                     <div class="product-item">
                         <img src="foto/brownies_6.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
 
                     <div class="product-item">
                         <img src="foto/brownies_7.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
 
                     <div class="product-item">
                         <img src="foto/brownies_8.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
 
                     <div class="product-item">
                         <img src="foto/brownies_9.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
 
                     <div class="product-item">
                         <img src="foto/brownies_10.jpg" alt="Foto Profil">
-                        <!-- <a href="#products" class="hero-btn">Shop Now</a> -->
                     </div>
-                    <!-- Tambahkan produk lainnya jika diperlukan -->
+
+                    <div class="product-item">
+                        <img src="foto/brownies_11.jpg" alt="Foto Profil">
+                    </div>
                 </div>
                 <button class="prev-btn">&#10094;</button>
                 <button class="next-btn">&#10095;</button>
             </div>
 
-
-
-            <!-- About Section -->
             <section id="pricelist" class="pricelist">
-
-                <!-- HEADER -->
-                <!-- MINI EDITION -->
                 <div class="pricelist-header">
                     <h1>Brownies Fudgy</h1>
                     <h2>MINI EDITION</h2>
@@ -173,16 +155,12 @@
                             (Custom max. 6 huruf)
                         </div>
                     </div>
-
-                    <!-- Tambahkan semua produk lain juga dalam struktur yang sama -->
                 </div>
 
                 <div class="pricelist-header">
                     <h1>Brownies Fudgy</h1>
                 </div>
 
-
-                <!-- SINGLE BERRY -->
                 <div class="pricelist-grid">
                     <div class="card">
                         <img src="foto/brownies_8.jpg" alt="Single Berry">
@@ -196,7 +174,6 @@
                         </div>
                     </div>
 
-                    <!-- ORIGINAL -->
                     <div class="card">
                         <img src="foto/brownies_6.jpg" alt="Original Brownies">
                         <div class="title">ORIGINAL</div>
@@ -215,12 +192,9 @@
                     <h2>CHOCOBERRY</h2>
                 </div>
 
-
-                <!-- CIRCLE -->
-
                 <div class="pricelist-grid">
                     <div class="card">
-                        <img src="foto/brownies_10.jpg" alt="Circle Brownies" class="adjusted-image"/>
+                        <img src="foto/brownies_10.jpg" alt="Circle Brownies" class="adjusted-image" />
                         <div class="title">CIRCLE</div>
                         <div class="price">Rp 95.000</div>
                         <div class="desc">
@@ -230,7 +204,6 @@
                         </div>
                     </div>
 
-                    <!-- RECTANGLE -->
                     <div class="card">
                         <img src="foto/brownies_7.jpg" alt="Rectangle Brownies" class="adjusted-image">
                         <div class="title">RECTANGLE</div>
@@ -247,12 +220,9 @@
                     <h1>Brownies Fudgy</h1>
                 </div>
 
-
-                <!-- PIZZA -->
-
                 <div class="pricelist-grid">
                     <div class="card">
-                        <img src="foto/brownies_1.jpg" alt="Pizza Brownies" class="adjusted-image">
+                        <img src="foto/brownies_11.jpg" alt="Pizza Brownies" class="adjusted-image">
                         <div class="title">PIZZA BROWNIES</div>
                         <div class="price">Rp 95.000</div>
                         <div class="desc">
@@ -270,41 +240,46 @@
 
             </section>
 
-            <!-- <div class="pricelist-footer">brono</div>
-        </section> -->
+            <section id="layanan" class="layanan">
+                <h3>Layanan Pembayaran</h3>
+                <p>Di Brono, kami menyediakan berbagai metode pembayaran yang aman dan mudah untuk kenyamanan
+                    Anda.
+                    Berikut adalah opsi pembayaran yang tersedia.</p>
+                <hr>
+                <ul>
+                    <li>Transfer Bank</li>
+                    <li>Shopee Pay</li>
+                    <li>Dana</li>
+                    <li>QRIS</li>
+                    <li>GoPay</li>
+                    <li>OVO</li>
+                </ul>
+            </section>
 
-
-        <section id="layanan" class="layanan">
-            <h3>Layanan Pembayaran</h3>
-            <p>Di Brono, kami menyediakan berbagai metode pembayaran yang aman dan mudah untuk kenyamanan
-                Anda.
-                Berikut adalah opsi pembayaran yang tersedia.</p>
-            <hr>
-            <ul>
-                <li>Transfer Bank</li>
-                <li>Shopee Pay</li>
-                <li>Dana</li>
-                <li>QRIS</li>
-                <li>GoPay</li>
-                <li>OVO</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="Kontak_Kami">
-            <h2>Kontak Kami</h2>
-            <p>Email: brono.com</p>
-            <p>Telepon: +62 838-4382-8516</p>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-            <a href="https://www.twitter.com" target="_blank">Twitter</a>
-        </section>
+            <section id="contact" class="Kontak_Kami">
+                <h2>Kontak Kami</h2>
+                <p>Email: brono.com</p>
+                <p>Telepon: +62 838-4382-8516</p>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com" target="_blank">@jualanannya.azmy</a> |
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </section>
     </main>
 
-    <!-- Footer -->
     <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Brono. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
 
-        
-        <!-- <div class="social-links">
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <div class="social-links">
             <h2>Berikan pesan/komentar anda</h2>
             <form action="#home" method="post">
                 <label for="name">Nama:</label>
@@ -315,11 +290,3 @@
                 <textarea id="message" name="message"></textarea><br><br>
                 <input type="submit" value="Kirim">
             </form> -->
-        </div>
-        <p>&copy; 2025 PPM Kelompok 1. Semua hak cipta dilindungi.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
