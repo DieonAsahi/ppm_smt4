@@ -53,4 +53,32 @@ function nextSlide() {
     updateSlider();
 }
 
-setInterval(nextSlide, 3000); 
+setInterval(nextSlide, 3000);
+
+let aktif = null;
+
+function toggleNomor(elem) {
+    const sedangAktif = aktif === elem;
+
+    // Kembalikan elemen aktif sebelumnya ke nama
+    if (aktif && !sedangAktif) {
+        aktif.innerText = aktif.dataset.nama;
+    }
+
+    // Toggle elemen saat ini
+    if (sedangAktif) {
+        elem.innerText = elem.dataset.nama;
+        aktif = null;
+    } else {
+        elem.innerText = elem.dataset.nomor;
+        aktif = elem;
+    }
+}
+
+// Klik di luar elemen, kembalikan yang aktif
+document.addEventListener("click", function (event) {
+    if (aktif && !aktif.contains(event.target)) {
+        aktif.innerText = aktif.dataset.nama;
+        aktif = null;
+    }
+});
