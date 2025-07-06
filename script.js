@@ -3,12 +3,12 @@ const overlay = document.querySelector('.overlay');
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 const closeBtn = document.querySelector('.close-btn');
 
+// Sidebar toggle
 sidebarToggle.addEventListener('click', () => {
     sidebar.style.width = '250px';
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
 });
-
 
 closeBtn.addEventListener('click', closeSidebar);
 overlay.addEventListener('click', closeSidebar);
@@ -19,40 +19,58 @@ function closeSidebar() {
     document.body.style.overflow = 'auto';
 }
 
+// --- SLIDER ---
 let currentIndex = 0;
 const productList = document.querySelector('.product-list');
-const productItems = document.querySelectorAll('.product-item');
-const totalProducts = productItems.length;
 
-document.querySelector('.prev-btn').addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = totalProducts - 1;
-    }
-    updateSlider();
-});
+// Duplikasikan isi untuk efek looping
+productList.innerHTML += productList.innerHTML;
 
-document.querySelector('.next-btn').addEventListener('click', nextSlide);
+// Setelah innerHTML digandakan, ambil ulang .product-item
+let productItems = document.querySelectorAll('.product-item');
+const totalProducts = productItems.length / 2; // Asli saja
 
 function updateSlider() {
-    const item = productItems[0];
-    const itemWidth = item.getBoundingClientRect().width;
+    const itemWidth = productItems[0].getBoundingClientRect().width;
     const offset = -currentIndex * itemWidth;
-
+    productList.style.transition = "transform 0.5s ease-in-out";
     productList.style.transform = `translateX(${offset}px)`;
 }
 
-
 function nextSlide() {
-    if (currentIndex < totalProducts - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
+    currentIndex++;
     updateSlider();
+
+    if (currentIndex === totalProducts) {
+        setTimeout(() => {
+            productList.style.transition = "none";
+            currentIndex = 0;
+            const offset = -currentIndex * productItems[0].getBoundingClientRect().width;
+            productList.style.transform = `translateX(${offset}px)`;
+        }, 500); // tunggu animasi selesai
+    }
 }
 
+function prevSlide() {
+    if (currentIndex === 0) {
+        currentIndex = totalProducts;
+        const offset = -currentIndex * productItems[0].getBoundingClientRect().width;
+        productList.style.transition = "none";
+        productList.style.transform = `translateX(${offset}px)`;
+    }
+
+    setTimeout(() => {
+        currentIndex--;
+        productList.style.transition = "transform 0.5s ease-in-out";
+        updateSlider();
+    }, 20);
+}
+
+// Tombol next/prev
+document.querySelector('.next-btn').addEventListener('click', nextSlide);
+document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+
+// Auto-slide
 setInterval(nextSlide, 3000);
 
 let aktif = null;
@@ -82,3 +100,24 @@ document.addEventListener("click", function (event) {
         aktif = null;
     }
 });
+
+ let lastScrollY = window.scrollY;
+  let timeout;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    // Scroll ke bawah → sembunyikan
+    if (window.scrollY > lastScrollY) {
+      header.style.top = "-100px";
+    } else {
+      header.style.top = "0";
+    }
+
+    // Reset jika scroll berhenti → munculkan
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      header.style.top = "0";
+    }, 150); // muncul kembali 150ms setelah scroll berhenti
+
+    lastScrollY = window.scrollY;
+  });
