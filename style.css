@@ -47,7 +47,8 @@ header {
 
 
 header .logo:hover {
-  font-size: 1.5em;
+  color: #6b001b; /* contoh warna hover */
+  transition: color 0.3s ease;
 }
 
 header nav ul {
@@ -62,6 +63,7 @@ header nav ul li {
 
 header nav ul li a {
   display: inline-block;
+  font-weight: bold;
   color: #3A0519;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -99,7 +101,7 @@ header nav ul li a:hover {
 }
 
 .hero-text p {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 20px;
   color: #3A0519;
   text-align: justify;
@@ -143,12 +145,12 @@ header nav ul li a:hover {
   padding: 10px 30px 10px;
   text-decoration: none;
   font-size: 1.2em;
-  color: #fff;
+  color:#3A0519;
   display: block;
 }
 
 .sidebar a:hover {
-  background-color: #575757;
+  background-color: #EF88AD;
 }
 
 .sidebar .close-btn {
@@ -174,7 +176,9 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: top 0.3s ease; /* <-- tambahkan ini */
 }
+
 
 .sidebar-toggle:hover {
   background-color: #555;

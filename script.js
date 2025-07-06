@@ -101,23 +101,30 @@ document.addEventListener("click", function (event) {
     }
 });
 
- let lastScrollY = window.scrollY;
-  let timeout;
-  const header = document.querySelector("header");
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+const toggle = document.querySelector(".sidebar-toggle");
+let scrollTimeout;
 
-  window.addEventListener("scroll", () => {
-    // Scroll ke bawah → sembunyikan
-    if (window.scrollY > lastScrollY) {
-      header.style.top = "-100px";
-    } else {
-      header.style.top = "0";
-    }
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
 
-    // Reset jika scroll berhenti → munculkan
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      header.style.top = "0";
-    }, 150); // muncul kembali 150ms setelah scroll berhenti
+  if (currentScrollY > lastScrollY) {
+    // Scroll ke bawah: sembunyikan
+    header.style.top = "-100px";
+    toggle.style.top = "-100px";
+  } else {
+    // Scroll ke atas: munculkan
+    header.style.top = "0";
+    toggle.style.top = "10px";
+  }
 
-    lastScrollY = window.scrollY;
-  });
+  // Jika scroll berhenti, tampilkan kembali setelah 150ms
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    header.style.top = "0";
+    toggle.style.top = "10px";
+  }, 150);
+
+  lastScrollY = currentScrollY;
+});
