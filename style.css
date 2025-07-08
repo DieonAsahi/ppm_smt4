@@ -129,16 +129,23 @@ header nav ul li a:hover {
 }
 
 .sidebar {
-  height: 100%;
-  width: 0;
   position: fixed;
   top: 0;
-  right: 0;
-  background-color: #EF88AD;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 20px;
+  right: -100%; /* tersembunyi */
+  height: 100vh;
+  width: 300px;
+  background-color: #f27ba3;
+  transition: left 0.3s ease;
   z-index: 1000;
+}
+.sidebar.active {
+  right: 0; /* tampil saat aktif */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-top: 20px;
+  margin: 0;
 }
 
 .sidebar a {
@@ -631,11 +638,7 @@ footer .social-links a:hover {
   }
 }
 
-@media (max-width: 480px) {
-  .sidebar {
-    width: 50vw; /* Ubah dari 100% jadi 70% agar tidak terlalu lebar */
-  }
-}
+
 
 @media (max-width: 480px) {
   .hero-text h1 {
@@ -793,5 +796,12 @@ footer .social-links a:hover {
 
   .top-navbar {
     display: block !important;
+  }
+}
+
+/* Media query untuk mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 40vw; /* responsif di mobile */
   }
 }

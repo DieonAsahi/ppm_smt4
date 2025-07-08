@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.close-btn');
 
 // Sidebar toggle
 sidebarToggle.addEventListener('click', () => {
-    sidebar.style.width = '250px';
+    sidebar.classList.add('active'); // hanya tambahkan class
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
 });
@@ -14,7 +14,7 @@ closeBtn.addEventListener('click', closeSidebar);
 overlay.addEventListener('click', closeSidebar);
 
 function closeSidebar() {
-    sidebar.style.width = '0';
+    sidebar.classList.remove('active');
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
