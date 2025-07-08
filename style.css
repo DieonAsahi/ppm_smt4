@@ -162,8 +162,8 @@ header nav ul li a:hover {
 
 .sidebar .close-btn {
   position: absolute;
-  bottom: 20px;
-  left: 0;
+  bottom: 120px;
+  left: 0px;
   font-size: 2em;
   margin-right: 50px;
   color: #3A0519;
@@ -802,6 +802,6 @@ footer .social-links a:hover {
 /* Media query untuk mobile */
 @media (max-width: 480px) {
   .sidebar {
-    width: 40vw; /* responsif di mobile */
+    width: 50vw; /* responsif di mobile */
   }
 }
