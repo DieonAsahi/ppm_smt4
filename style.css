@@ -159,7 +159,7 @@ header nav ul li a:hover {
   left: 0;
   font-size: 2em;
   margin-right: 50px;
-  color: #fff;
+  color: #3A0519;
   text-decoration: none;
 }
 
@@ -167,8 +167,8 @@ header nav ul li a:hover {
   position: fixed;
   top: 10px;
   right: 20px;
-  background-color: #333;
-  color: #fff;
+  background-color:  #EF88AD;
+  color: #3A0519;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -177,11 +177,6 @@ header nav ul li a:hover {
   align-items: center;
   justify-content: center;
   transition: top 0.3s ease; /* <-- tambahkan ini */
-}
-
-
-.sidebar-toggle:hover {
-  background-color: #555;
 }
 
 .sidebar :hover {
@@ -237,7 +232,7 @@ main section ul {
   background-color: #fffaf6;
   padding: 50px 20px;
   font-family: 'Poppins', sans-serif;
-  color: #2b2b2b;
+  color: #3A0519;
 }
 
 .pricelist-header {
@@ -248,13 +243,13 @@ main section ul {
 
 .pricelist-header h1 {
   font-size: 2.5rem;
-  color: #2b2b2b;
+  color: #3A0519;
   margin-bottom: 10px;
 }
 
 .pricelist-header h2 {
   font-size: 1.5rem;
-  color: #666;
+  color:#3A0519;
 }
 
 .pricelist-container,
@@ -314,14 +309,14 @@ main section ul {
 .price-card .price {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #000;
+  color: #3A0519;
   margin-bottom: 10px;
 }
 
 .card .desc,
 .price-card .desc {
   font-size: 0.9rem;
-  color: #555;
+  color: #3A0519;
   line-height: 1.5;
 }
 
@@ -330,7 +325,7 @@ main section ul {
   margin-top: 40px;
   font-size: 1rem;
   font-style: italic;
-  color: #5c4033;
+  color: #3A0519;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -423,7 +418,7 @@ main section ul {
 }
 
 #contact {
-  padding: 40px 20px;
+  padding: 20px 40px;
   margin-top: 5 0px;
   background-color: #f9f9f9;
   text-align: center;
@@ -431,18 +426,18 @@ main section ul {
 
 #contact h2 {
   font-size: 24px;
-  color: #333;
+  color: #3A0519;
   margin-bottom: 20px;
 }
 
 #contact p {
-  color: #666;
+  color: #3A0519;
   margin: 5px 0;
 }
 
 
 #contact a {
-  color: #333;
+  color: #3A0519;
   text-decoration: none;
   font-weight: bold;
   margin: 0 10px;
@@ -481,7 +476,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-form {
+/* form {
   margin-top: 20px;
   text-align: left;
   max-width: 500px;
@@ -522,7 +517,7 @@ form input[type="submit"]:hover {
 
 footer .social-links a:hover {
   text-decoration: underline;
-}
+} */
 
 .top-navbar {
   display: block;
@@ -569,7 +564,7 @@ footer .social-links a:hover {
   flex: 0 1 calc(50% - 20px);
   /* Dua item per baris */
   padding: 20px;
-  background-color: white;
+  background-color: #f0f0f0;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -579,7 +574,7 @@ footer .social-links a:hover {
 }
 
 .btn-bayar:hover {
-  background-color: #f0f0f0;
+  background-color:  #EF88AD;
 }
 
 
@@ -625,7 +620,10 @@ footer .social-links a:hover {
   }
 
   .products h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .products p {
+    font-size: 1rem;
   }
 
   .product-card h3 {
@@ -634,16 +632,29 @@ footer .social-links a:hover {
 }
 
 @media (max-width: 480px) {
+  .sidebar {
+    width: 50vw; /* Ubah dari 100% jadi 70% agar tidak terlalu lebar */
+  }
+}
+
+@media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .hero-text p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   .product-card p {
     font-size: 0.9rem;
+  }
+
+  .products h2 {
+    font-size: 1.2rem;
+  }
+  .products p {
+    font-size: 0.8rem;
   }
 }
 
