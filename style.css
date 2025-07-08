@@ -137,7 +137,6 @@ header nav ul li a:hover {
   background-color: #f27ba3;
   transition: left 0.3s ease;
   z-index: 1000;
-  position: relative;
 }
 .sidebar.active {
   right: 0; /* tampil saat aktif */
